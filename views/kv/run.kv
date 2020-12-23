@@ -1,0 +1,86 @@
+#: include views/kv/appframe.kv
+ScreenUtama:
+    screenmanager:screenmanager
+    id:screenmanager
+    Screen:
+        login_m:login_m
+        username:username
+        password:password
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: 'views/logo/background.jpg'
+        MDCard :
+            size_hint : .8,.8
+            # size : 300,400
+            pos_hint : {"center_x":.5,"center_y":.5}
+            elevation : 15
+            padding : 20
+            spacing : 15
+            orientation : "vertical"
+            # Adding items to the card
+            MDBoxLayout:
+                id: box_top
+                # spacing: "20dp"
+                # adaptive_height: True
+
+                Image:
+                    source: "views/logo/python.png"
+                    allow_stretch: True
+                    keep_ratio:True
+                    # size_hint: 1,1
+                    # pos_hint: {'center_x': 0.5, 'center_y': 0.5}  
+
+                    # size: dp(50), dp(50)
+            MDLabel :
+                text : "Login Dulu Yuk..."
+                # font_style : 'Button'
+                color:(.5,.8,.02,1)
+                font_size : 45
+                halign : "center"
+                size_hint_y : None
+                height : self.texture_size[1]
+                padding_y : 15
+            MDTextField :
+                id : username
+                hint_text : "username"
+                icon_right : "account"
+                # helper_text:"silahkan disi"
+                hint_text: "Username"
+                # required: True
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Enter text"                    
+                # on_focus:self.parent.parent.text_change(username)
+
+                size_hint_x : .8
+                # width : 220
+                # font_size : 20
+                pos_hint : {"center_x":.5}
+                # color_active : [1,1,1,1]
+            MDTextFieldRound :
+                id : password
+                hint_text : "password"
+                icon_right : "eye-off"
+                size_hint_x : .8
+                # width : 220
+                # font_size : 20
+                pos_hint : {"center_x":.5}
+                # color_active : [1,1,1,1]
+                password : True
+
+            MDRoundFlatButton:
+                id: login_m
+                text : 'Login'
+                pos_hint : {"center_x":.5}
+                on_release: root.sign_in(username,password)
+            MDRoundFlatButton :
+                text : 'SIGN-UP'
+                pos_hint : {"center_x":.5}
+                # font_size : 15
+                on_release: root.sign_up()
+
+    Screen2:
+        # id:screen2
+        # name:"screen2"
