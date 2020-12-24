@@ -1,6 +1,6 @@
 from kivy.uix.screenmanager import ScreenManager,Screen
 from kivy.uix.boxlayout import BoxLayout
-from kivy_garden.zbarcam import ZBarCam
+# from kivy_garden.zbarcam import ZBarCam
 
 
 class Screen2(Screen):

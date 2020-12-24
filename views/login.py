@@ -7,13 +7,13 @@ from kivymd.uix.button import MDRoundFlatButton
 from kivy.properties import ObjectProperty
 import sqlite3
 from views.appframe import Screen2
-from android.permissions import request_permissions, Permission
+# from android.permissions import request_permissions, Permission
 
-request_permissions([
-    Permission.CAMERA,
-    Permission.WRITE_EXTERNAL_STORAGE,
-    Permission.READ_EXTERNAL_STORAGE
-])
+# request_permissions([
+#     Permission.CAMERA,
+#     Permission.WRITE_EXTERNAL_STORAGE,
+#     Permission.READ_EXTERNAL_STORAGE
+# ])
 
 
 class Connect():
