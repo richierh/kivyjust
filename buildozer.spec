@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.6.4,kivy==2.0.0rc3,https://github.com/kivymd/KivyMD/archive/master.zip,sdl2_ttf==2.0.15,zbarcam,sqlite3,android,libiconv,libzbar,pil,python3,pyzbar==0.1.8,kivy-garden==0.1.4,xcamera
+requirements = python3==3.6.4,kivy==2.0.0rc3,https://github.com/kivymd/KivyMD/archive/master.zip,sdl2_ttf==2.0.15,zbarcam,sqlite3,android,libiconv,libzbar,pil,python3,pyzbar==0.1.8,kivy-garden==0.1.4,xcamera,plyer
 
 
 #requiremesnts = python3,kivy==master,git+https://github.com/HeaTTheatR/KivyMD.git,sdl2_ttf==2.0.15
