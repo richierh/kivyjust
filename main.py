@@ -1,6 +1,7 @@
 from kivymd.app import MDApp
 from kivy.lang import Builder
 import kivy
+from kivy_garden.zbarcam import ZBarCam
 
 from android.permissions import request_permissions, Permission
 
@@ -9,9 +10,9 @@ request_permissions([
     Permission.WRITE_EXTERNAL_STORAGE,
     Permission.READ_EXTERNAL_STORAGE
 ])
+#:import ZBarCam kivy_garden.zbarcam.ZBarCam
 
 kv = """
-#:import ZBarCam kivy_garden.zbarcam.ZBarCam
 BoxLayout:
     orientation: 'vertical'
     ZBarCam:
